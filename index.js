@@ -7,7 +7,7 @@ client.on("ready", ()=> {
 });
 client.on("message", message => {
     var i;
-    for(i=0; i<100; i++){
+    for(i=0; i<message.content.split("\n").length; i++){
         let arg = message.content.split("\n").slice(i);
         var question = arg.join(" ");
         if(question.toLowerCase().startsWith(`q: `)) {break} else {continue};
